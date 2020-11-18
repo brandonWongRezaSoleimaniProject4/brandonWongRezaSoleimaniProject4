@@ -1,6 +1,6 @@
 // create a namespace object to represent our app
 const gameApp = {};
-const gameTitle = 'batman';
+const gameTitle = '';
 
 // store our root endpoint within our app object
 gameApp.apiUrl = `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`;
@@ -72,11 +72,11 @@ gameApp.clickOnContentEventListener = function(gameDetails) {
 }
 
 // define a method which will initialize the app once the document is ready (initialization)
-// gameApp.init = function() {
-
-// }
+gameApp.init = function() {
+    gameApp.getGames();
+}
 
 // call the initialization method (document ready function)
-//   $(document).ready(function() {
-//     gameApp.init();
-//   });
+  $(document).ready(function() {
+    gameApp.init();
+  });
