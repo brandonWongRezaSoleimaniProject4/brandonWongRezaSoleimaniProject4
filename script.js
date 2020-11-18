@@ -6,7 +6,7 @@ gameApp.apiUrl = 'https://www.cheapshark.com/redirect?dealID={id}';
 
 // define a method on our app object which will makes an asynchronous request to our API for the game data (AJAX & .then)
 gameApp.getGames = function() {
-    $.ajex({
+    $.ajax({
         url: gameApp.apiUrl,
         method: 'GET',
         dataType: 'json',
