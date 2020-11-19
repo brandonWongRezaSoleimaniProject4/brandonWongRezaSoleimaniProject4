@@ -1,13 +1,12 @@
 // create a namespace object to represent our app
 const gameApp = {};
-const gameTitle = '';
-
+// let gameTitle = ``;
 // store our root endpoint within our app object
-gameApp.apiUrl = `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`;
+// gameApp.apiUrl = `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`;
 
 // define a method on our app object which will makes an asynchronous request to our API for the game data (AJAX & .then)
 gameApp.getGames = function(gameTitle) {
-    $.ajax({
+$.ajax({
         url: `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`,
         method: `GET`,
         dataType: `json`,
@@ -18,14 +17,16 @@ gameApp.getGames = function(gameTitle) {
 }
 
 // event listener will wait for input text when submitted, to then display game info results to populate to the following content cards. (search bar)
-gameApp.searchEventListener = function(event) {
+gameApp.searchVideoGameTitle = function() {
     // inside the function apply prevent default, to prevent refreshing on the page.
     
     // due to ajax error pending to complete   
-    event.preventDefault();
-    $(`#submit`).on(`submit`, function () {
-        const chosenGame = $(this).val();
-
+    $(`.gameSearchForm`).on(`submit`, function(event) {
+        event.preventDefault();
+        const chosenGame = $(`#search`).val();
+        $(`#search`).val(``);
+        // console.log(chosenGame);
+        gameApp.getGames(chosenGame);       
     })
 }
 
@@ -73,6 +74,7 @@ gameApp.clickOnContentEventListener = function(gameDetails) {
 
 // define a method which will initialize the app once the document is ready (initialization)
 gameApp.init = function() {
+    gameApp.searchVideoGameTitle();
     gameApp.getGames();
 }
 
