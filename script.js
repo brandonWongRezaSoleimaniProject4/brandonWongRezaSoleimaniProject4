@@ -13,6 +13,8 @@ $.ajax({
     })
     .then(function(res) {
         console.log(res);
+        gameApp.displayGameCard(res.Array[0]);
+        
     })
 }
 
@@ -28,21 +30,23 @@ gameApp.searchVideoGameTitle = function() {
         // $(`#search`).val(``);
         gameApp.getGames(chosenGame);
         
-
-        // trying to display game detail to web browers
-        gameApp.displayGameCard = function() {
-
-            let gameContentCard =
-            `<ul>
-            <li class="gameCard gameCard1">
-            <h2>${chosenGame[0].external}</h2>
-            <img src="${chosenGame[0].thumb}" alt="${ChosenGame[0].external}">
-            </li>
-            </ul> `;
-            $(`.gameCardContainer`).append(gameContentCard);
-            // displayGameCard(gameContentCard);
-        }
     })
+}
+
+// trying to display game detail to web browers
+gameApp.displayGameCard = function(gameInfo) {
+    gameInfo.forEach(function(gameData){
+        let gameContentCard =
+            `<ul>
+                <li class="gameCard gameCard1">
+                    <h2>${gameData}</h2>
+
+                </li>
+            </ul> `;
+        $(`.gameCardContainer`).append(gameContentCard);
+        // gameApp.getGames(chosenGame[0]);
+        // displayGameCard(gameContentCard);
+    });
 }
 
 // event listener will wait for an on click event on the content card. When clicked the user will be navigated to a different page. The new page will display in greater detail about the game. (description, genre labels, gallery, specs, game platforms, ratings, review)
