@@ -1,6 +1,6 @@
 // create a namespace object to represent our app
 const gameApp = {};
-// let gameTitle = ``;
+
 // store our root endpoint within our app object
 // gameApp.apiUrl = `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`;
 
@@ -12,9 +12,8 @@ $.ajax({
         dataType: `json`,
     })
     .then(function(res) {
-        console.log(res);
-        gameApp.displayGameCard(res.Array[0]);
-        
+        // console.log(res);
+        gameApp.displayGameCard(res);
     })
 }
 
@@ -28,19 +27,21 @@ gameApp.searchVideoGameTitle = function() {
         const chosenGame = $(`#search`).val();
         // commenting out search value to keep search text by user for UX
         // $(`#search`).val(``);
+        
         gameApp.getGames(chosenGame);
         
     })
 }
 
 // trying to display game detail to web browers
-gameApp.displayGameCard = function(gameInfo) {
-    gameInfo.forEach(function(gameData){
+gameApp.displayGameCard = function(gameArrayInfo) {
+    gameArrayInfo.forEach(function(gameData){
+        console.log(gameData);
         let gameContentCard =
             `<ul>
                 <li class="gameCard gameCard1">
-                    <h2>${gameData}</h2>
-
+                    <h2>${gameData.external}</h2>
+                    <img src="${gameData.thumb}">
                 </li>
             </ul> `;
         $(`.gameCardContainer`).append(gameContentCard);
@@ -93,7 +94,7 @@ gameApp.clickOnContentEventListener = function(gameDetails) {
 
 // define a method which will initialize the app once the document is ready (initialization)
 gameApp.init = function() {
-    gameApp.getGames();
+    // gameApp.getGames();
     gameApp.searchVideoGameTitle();
 }
 
