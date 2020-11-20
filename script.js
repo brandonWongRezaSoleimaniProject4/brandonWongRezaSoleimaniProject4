@@ -24,9 +24,24 @@ gameApp.searchVideoGameTitle = function() {
     $(`.gameSearchForm`).on(`submit`, function(event) {
         event.preventDefault();
         const chosenGame = $(`#search`).val();
-        $(`#search`).val(``);
-        // console.log(chosenGame);
-        gameApp.getGames(chosenGame);       
+        // commenting out search value to keep search text by user for UX
+        // $(`#search`).val(``);
+        gameApp.getGames(chosenGame);
+        
+
+        // trying to display game detail to web browers
+        gameApp.displayGameCard = function() {
+
+            let gameContentCard =
+            `<ul>
+            <li class="gameCard gameCard1">
+            <h2>${chosenGame[0].external}</h2>
+            <img src="${chosenGame[0].thumb}" alt="${ChosenGame[0].external}">
+            </li>
+            </ul> `;
+            $(`.gameCardContainer`).append(gameContentCard);
+            // displayGameCard(gameContentCard);
+        }
     })
 }
 
@@ -74,11 +89,11 @@ gameApp.clickOnContentEventListener = function(gameDetails) {
 
 // define a method which will initialize the app once the document is ready (initialization)
 gameApp.init = function() {
-    gameApp.searchVideoGameTitle();
     gameApp.getGames();
+    gameApp.searchVideoGameTitle();
 }
 
 // call the initialization method (document ready function)
-  $(document).ready(function() {
+    $(document).ready(function() {
     gameApp.init();
-  });
+    });
