@@ -234,3 +234,76 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+body {
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 15vh;
+  background-color: #04132A;
+}
+
+main {
+  height: 80vh;
+  background-color: #23395B;
+}
+
+.wrapper {
+  max-width: 1450px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gameCardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+ul {
+  width: calc(100% / 3);
+}
+
+li {
+  list-style: none;
+  border: #04132A 2px solid;
+  padding: 10px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5vh;
+  background-color: #04132A;
+  font-family: 'Press Start 2P', cursive;
+}
