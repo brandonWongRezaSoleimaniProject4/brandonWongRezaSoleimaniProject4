@@ -1,34 +1,46 @@
 main {
-    height: 80vh;
+    height: 120vh;
     background-color: $primary;
-}
-
-.wrapper {
-    max-width: 1450px;
-    width: 80%;
-    margin: 0 auto;
 }
 
 form {
     display: flex;
     justify-content: center;
+    padding: 50px 0;
+}
+
+input[type="search"] {
+    padding: 15px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    padding: 15px 30px;
 }
 
 .gameCardContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 ul {
     width: calc(100% / 3);
+    padding: 20px;
 }
 
 li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style: none;
     border: $secondary 2px solid;
     padding: 10px;
+    text-align: center;
+}
+
+img {
+    height: 100px;
 }
 
 
