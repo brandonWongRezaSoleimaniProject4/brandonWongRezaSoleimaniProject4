@@ -27,6 +27,7 @@ gameApp.searchVideoGameTitle = function () {
 // trying to display game detail to web browsers
 gameApp.displayGameCard = function (gameArrayInfo) {
     // empty before for each, to prevent from deleting all items using the forEach method.
+        // <img src="https://steamcdn-a.akamaihd.net/steam/apps/${gameData.steamAppID}/header.jpg">
     $(`.gameCardContainer`).empty();
     gameArrayInfo.forEach(function (gameData) {
         console.log(gameData);
@@ -35,6 +36,8 @@ gameApp.displayGameCard = function (gameArrayInfo) {
                 <li class="gameCard">
                     <h2>${gameData.external}</h2>
                     <img src="${gameData.thumb}">
+                    <p>Purchase on <a href="https://store.steampowered.com/app/${gameData.steamAppID}"><i class="fab fa-steam"></i>Steam store</a></p>
+                    <p>Lowest documentated price: <a href="https://steamdb.info/app/${gameData.steamAppID}/">$${gameData.cheapest}<a></p>
                 </li>
             </ul> `;
         $(`.gameCardContainer`).append(gameContentCard);

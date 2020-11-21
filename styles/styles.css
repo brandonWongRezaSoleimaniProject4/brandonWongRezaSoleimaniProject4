@@ -235,6 +235,18 @@ html {
   overflow: hidden;
 }
 
+.wrapper {
+  max-width: 1450px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  max-width: 1450px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 body {
   color: #FFFFFF;
   font-family: 'Lato', sans-serif;
@@ -244,6 +256,10 @@ h1 {
   font-family: 'Press Start 2P', cursive;
 }
 
+h2 {
+  text-align: center;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,19 +267,13 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 15vh;
+  height: 10vh;
   background-color: #04132A;
 }
 
 main {
-  height: 80vh;
+  height: 120vh;
   background-color: #23395B;
-}
-
-.wrapper {
-  max-width: 1450px;
-  width: 80%;
-  margin: 0 auto;
 }
 
 form {
@@ -273,6 +283,16 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 50px 0;
+}
+
+input[type="search"] {
+  padding: 15px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  padding: 15px 30px;
 }
 
 .gameCardContainer {
@@ -288,12 +308,28 @@ form {
 
 ul {
   width: calc(100% / 3);
+  padding: 20px;
 }
 
 li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   border: #04132A 2px solid;
   padding: 10px;
+  text-align: center;
+}
+
+img {
+  height: 100px;
 }
 
 footer {
