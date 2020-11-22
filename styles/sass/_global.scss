@@ -1,34 +1,43 @@
+// colour variables styles
 $primary: #23395B;
 $secondary: #04132A;
 $tertiary: #FFFFFF;
 $quaternary: #FCA417;
 $quinary: #FF0000;
 
+body,
+a {
+   color: $tertiary; 
+}
+
+// html stripping styles
 html {
-    font-size: 62.5%;
     padding: 0;
     margin: 0;
 }
 
+// body styles
 body {
-    color: $tertiary;
     font-family: 'Lato', sans-serif;
+}
+
+// wrapper styles
+.wrapper,
+.searchBarWrapper {
+    width: 80%;
+    margin: 0 auto;  
 }
 
 .wrapper {
     max-width: 1450px;
-    width: 80%;
-    margin: 0 auto;
 }
 
 .searchBarWrapper {
     max-width: 800px;
-    width: 80%;
-    margin: 0 auto;      
 }
 
+// anchor styles
 a {
-    color: $tertiary;
     padding-top: 5px;
 }
 
@@ -41,6 +50,7 @@ a:active {
     color: $quinary;
 }
 
+// anchor and paragraph styles
 a, 
 p {
     line-height: 27px;
