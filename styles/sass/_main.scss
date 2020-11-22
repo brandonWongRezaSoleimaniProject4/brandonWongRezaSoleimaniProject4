@@ -1,5 +1,5 @@
 main {
-    height: 85vh;
+    // height: 85vh;
     background-color: $primary;
 }
 
@@ -39,16 +39,25 @@ button:active {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 50px;
+    height: 100%;
+
+    // ul:last-child {
+    //     margin-bottom: 50px;
+    // }
 }
 
 ul {
-    width: 32%;
+    display: flex;
+    flex-wrap: wrap;
+    // width: 32%;
     padding: 5px 20px;
 }
 
 li {
     background-color: $secondary;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     list-style: none;
