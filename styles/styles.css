@@ -395,11 +395,12 @@ i.fa-search {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 55px;
 }
 
 .gameboyImg {
-  height: 600px;
-  margin-top: 55px;
+  width: 100%;
+  height: 400px;
 }
 
 footer {
@@ -421,4 +422,48 @@ footer p {
 footer a {
   text-decoration: none;
   color: #FFFFFF;
+}
+
+@media (max-width: 920px) {
+  footer p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  h1 {
+    font-size: 25px;
+    padding-top: 15px;
+  }
+  form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  input[type="search"] {
+    text-align: center;
+  }
+  button {
+    width: 100%;
+    padding: 11px 30px;
+  }
+  i.fa-search {
+    position: static;
+  }
+  .imageContainer {
+    position: relative;
+  }
+  .gameboyImg {
+    position: absolute;
+    left: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 18px;
+    padding-top: 22px;
+  }
+  footer p {
+    font-size: 8px;
+  }
 }
