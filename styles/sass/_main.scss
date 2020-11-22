@@ -1,5 +1,5 @@
 main {
-    height: 120vh;
+    height: 100vh;
     background-color: $primary;
 }
 
@@ -7,14 +7,16 @@ form {
     display: flex;
     justify-content: center;
     padding: 50px 0;
+    position: relative;
 }
 
 input[type="search"] {
     padding: 15px;
     width: 100%;
+    font-size: 24px;
 }
 
-input[type="submit"] {
+button {
     padding: 15px 30px;
 }
 
@@ -26,10 +28,11 @@ input[type="submit"] {
 
 ul {
     width: calc(100% / 3);
-    padding: 20px;
+    padding: 6px 20px;
 }
 
 li {
+    background-color: $secondary;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,4 +46,14 @@ img {
     height: 100px;
 }
 
+i.fa-search {
+    color: $primary;
+    position: absolute;
+    right: 16px;
+    top: 63px;
+    font-size: 35px;
+}
 
+.gameboyImg {
+    height: 800px;
+}

@@ -3,7 +3,7 @@ const gameApp = {};
 // define a method on our app object which will makes an asynchronous request to our API for the game data (AJAX & .then)
 gameApp.getGames = function (gameTitle) {
     $.ajax({
-        url: `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=9`,
+        url: `https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=6`,
         method: `GET`,
         dataType: `json`,
     })
@@ -35,8 +35,8 @@ gameApp.displayGameCard = function (gameArrayInfo) {
             `<ul>
                 <li class="gameCard">
                     <h2>${gameData.external}</h2>
-                    <img src="${gameData.thumb}">
-                    <p>Purchase on <a href="https://store.steampowered.com/app/${gameData.steamAppID}"><i class="fab fa-steam"></i>Steam store</a></p>
+                    <img src="${gameData.thumb}" alt="${gameData.external}">
+                    <p>Purchase on <a href="https://store.steampowered.com/app/${gameData.steamAppID}"><i class="fab fa-steam"></i> Steam store</a></p>
                     <p>Lowest documentated price: <a href="https://steamdb.info/app/${gameData.steamAppID}/">$${gameData.cheapest}<a></p>
                 </li>
             </ul> `;
