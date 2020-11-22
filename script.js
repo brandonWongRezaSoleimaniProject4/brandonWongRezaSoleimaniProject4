@@ -18,6 +18,7 @@ gameApp.searchVideoGameTitle = function () {
     // due to ajax error pending to complete   
     $(`.gameSearchForm`).on(`submit`, function (event) {
         event.preventDefault();
+        $(`.imageContainer`).hide();
         const chosenGame = $(`#search`).val();
         // commenting out search value to keep search text by user for UX
         // $(`#search`).val(``);
@@ -37,7 +38,7 @@ gameApp.displayGameCard = function (gameArrayInfo) {
                     <h2>${gameData.external}</h2>
                     <img src="${gameData.thumb}" alt="${gameData.external}">
                     <p>Purchase on <a href="https://store.steampowered.com/app/${gameData.steamAppID}"><i class="fab fa-steam"></i> Steam store</a></p>
-                    <p>Lowest documentated price: <a href="https://steamdb.info/app/${gameData.steamAppID}/">$${gameData.cheapest}<a></p>
+                    <p>Lowest recorded price: <a href="https://steamdb.info/app/${gameData.steamAppID}/">$${gameData.cheapest}<a></p>
                 </li>
             </ul> `;
         $(`.gameCardContainer`).append(gameContentCard);

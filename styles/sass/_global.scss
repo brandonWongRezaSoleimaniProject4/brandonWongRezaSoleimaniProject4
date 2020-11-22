@@ -1,6 +1,19 @@
 $primary: #23395B;
 $secondary: #04132A;
 $tertiary: #FFFFFF;
+$quaternary: #FCA417;
+$quinary: #FF0000;
+
+html {
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: $tertiary;
+    font-family: 'Lato', sans-serif;
+}
 
 .wrapper {
     max-width: 1450px;
@@ -8,16 +21,24 @@ $tertiary: #FFFFFF;
     margin: 0 auto;
 }
 
-.contentWrapper {
-    max-width: 1450px;
+.searchBarWrapper {
+    max-width: 800px;
     width: 80%;
-    margin: 0 auto;  
+    margin: 0 auto;      
 }
 
 a {
-    text-decoration: none;
-    color: #3CAEA3;
+    color: $tertiary;
     padding-top: 5px;
+}
+
+a:hover, 
+a:focus {
+    color: $quaternary;
+}
+
+a:active {
+    color: $quinary;
 }
 
 a, 

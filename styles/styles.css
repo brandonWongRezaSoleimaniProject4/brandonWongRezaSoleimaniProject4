@@ -235,27 +235,10 @@ html {
   overflow: hidden;
 }
 
-.wrapper {
-  max-width: 1450px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.contentWrapper {
-  max-width: 1450px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-  color: #3CAEA3;
-  padding-top: 5px;
-}
-
-a,
-p {
-  line-height: 27px;
+html {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -263,8 +246,40 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.wrapper {
+  max-width: 1450px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.searchBarWrapper {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  color: #FFFFFF;
+  padding-top: 5px;
+}
+
+a:hover,
+a:focus {
+  color: #FCA417;
+}
+
+a:active {
+  color: #FF0000;
+}
+
+a,
+p {
+  line-height: 27px;
+}
+
 h1 {
   font-family: 'Press Start 2P', cursive;
+  font-size: 35px;
 }
 
 h2 {
@@ -287,7 +302,7 @@ header {
 }
 
 main {
-  height: 100vh;
+  height: 85vh;
   background-color: #23395B;
 }
 
@@ -298,7 +313,7 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 0;
+  padding: 30px 0;
   position: relative;
 }
 
@@ -306,10 +321,25 @@ input[type="search"] {
   padding: 15px;
   width: 100%;
   font-size: 24px;
+  border: #23395B 5px solid;
 }
 
 button {
   padding: 15px 30px;
+  border: #23395B 5px solid;
+  cursor: pointer;
+}
+
+input[type="search"]:hover,
+input[type="search"]:focus,
+button:hover,
+button:focus {
+  border: #FCA417 5px solid;
+}
+
+button:active {
+  color: #FF0000;
+  border: #FF0000 5px solid;
 }
 
 .gameCardContainer {
@@ -324,8 +354,8 @@ button {
 }
 
 ul {
-  width: calc(100% / 3);
-  padding: 6px 20px;
+  width: 32%;
+  padding: 5px 20px;
 }
 
 li {
@@ -353,13 +383,23 @@ img {
 i.fa-search {
   color: #23395B;
   position: absolute;
-  right: 16px;
-  top: 63px;
+  right: 17px;
+  top: 46px;
   font-size: 35px;
 }
 
+.imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .gameboyImg {
-  height: 800px;
+  height: 600px;
+  margin-top: 55px;
 }
 
 footer {
@@ -376,4 +416,9 @@ footer {
 
 footer p {
   font-size: 16px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
