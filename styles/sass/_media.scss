@@ -1,10 +1,13 @@
-@media (max-width:920px) {
+// media (max-width: 920px) styles
+@media (max-width: 920px) {
     footer p {
         font-size: 10px;
+        padding-top: 5px;
     }
 }
 
-@media (max-width:620px) {
+// media (max-width: 630px) styles
+@media (max-width: 630px) {
 
     h1 {
         font-size: 25px;
@@ -28,17 +31,13 @@
         position: static;
     }
 
-    .imageContainer {
-        position: relative;
-    }
-
     .gameboyImg {
-        position: absolute;
-        left: 15px;
+        translate: 10px 0;
     }
 }
 
-@media (max-width:450px) {
+// media (max-width: 450px) styles
+@media (max-width: 450px) {
     h1 {
         font-size: 18px;
         padding-top: 22px;
@@ -47,5 +46,11 @@
     footer p {
         font-size: 8px;
     }
-    
+}
+
+// media (max-width: 330px) styles
+@media (max-width: 330px) {
+    footer p {
+        font-size: 7px;
+    }
 }

@@ -235,31 +235,35 @@ html {
   overflow: hidden;
 }
 
+body,
+a {
+  color: #FFFFFF;
+}
+
 html {
-  font-size: 62.5%;
   padding: 0;
   margin: 0;
 }
 
 body {
-  color: #FFFFFF;
   font-family: 'Lato', sans-serif;
+}
+
+.wrapper,
+.searchBarWrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .wrapper {
   max-width: 1450px;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .searchBarWrapper {
   max-width: 800px;
-  width: 80%;
-  margin: 0 auto;
 }
 
 a {
-  color: #FFFFFF;
   padding-top: 5px;
 }
 
@@ -305,27 +309,41 @@ main {
   background-color: #23395B;
 }
 
-form {
+form,
+.gameCardContainer,
+ul,
+li,
+.imageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+form {
   padding: 30px 0;
   position: relative;
 }
 
+input[type="search"],
+.gameboyImg {
+  width: 100%;
+}
+
+input[type="search"],
+button {
+  border: #23395B 5px solid;
+}
+
 input[type="search"] {
   padding: 15px;
-  width: 100%;
   font-size: 24px;
-  border: #23395B 5px solid;
 }
 
 button {
   padding: 15px 30px;
-  border: #23395B 5px solid;
   cursor: pointer;
 }
 
@@ -341,42 +359,28 @@ button:active {
   border: #FF0000 5px solid;
 }
 
-.gameCardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.gameCardContainer,
+ul,
+li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.gameCardContainer {
   padding-bottom: 50px;
   height: 100%;
 }
 
 ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 5px 20px;
 }
 
 li {
   background-color: #04132A;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   list-style: none;
   border: #04132A 2px solid;
   padding: 10px;
@@ -396,17 +400,11 @@ i.fa-search {
 }
 
 .imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 55px;
+  padding-bottom: 200px;
 }
 
 .gameboyImg {
-  width: 100%;
   height: 400px;
 }
 
@@ -430,10 +428,11 @@ footer a {
 @media (max-width: 920px) {
   footer p {
     font-size: 10px;
+    padding-top: 5px;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   h1 {
     font-size: 25px;
     padding-top: 15px;
@@ -452,12 +451,8 @@ footer a {
   i.fa-search {
     position: static;
   }
-  .imageContainer {
-    position: relative;
-  }
   .gameboyImg {
-    position: absolute;
-    left: 15px;
+    translate: 10px 0;
   }
 }
 
@@ -468,5 +463,11 @@ footer a {
   }
   footer p {
     font-size: 8px;
+  }
+}
+
+@media (max-width: 330px) {
+  footer p {
+    font-size: 7px;
   }
 }

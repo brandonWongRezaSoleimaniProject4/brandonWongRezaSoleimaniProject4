@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FontAwesome link -->
     <script src="https://kit.fontawesome.com/e6b6c3f0b6.js" crossorigin="anonymous"></script>
+    <!-- stylesheet link -->
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Google Font link -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Project 4 API - Save Point Search</title>
@@ -13,26 +16,30 @@
 <body>
     <!-- header starts here -->
     <header>
+        <!-- h1 starts here -->
         <h1>Save Point Search</h1>
     </header>
+    <!-- main starts here -->
     <main>
+        <!-- section starts here -->
         <section class="wrapper">
+            <!-- form starts here -->
             <form action="#" class="gameSearchForm searchBarWrapper">
-                <!-- <fieldset> -->
-                        <!-- *** change the font size of the dropdown menu ***-->
-                    <!-- search input -->
-                    <input type="search" value="" placeholder="Search Game" id="search" required>
-                    <!-- search label -->
-                    <label for="search" name="search" class="srOnly"></label>
-                    <!-- submit button/input -->
-                    <button type="submit" value="" id="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <!-- submit label -->
-                    <label for="submit" name="submit" class="srOnly"></label> 
-                <!-- </fieldset> -->
+                <!-- change the font size of the dropdown menu (stretch goal) ***-->
+                <!-- search input -->
+                <input type="search" value="" placeholder="Search Game" id="search" required>
+                <!-- search label -->
+                <label for="search" name="search" class="srOnly">Search Game</label>
+                <!-- submit button/input -->
+                <button type="submit" value="" id="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <!-- submit label -->
+                <label for="submit" name="submit" class="srOnly">Search Game Button</label> 
             </form>
+            <!-- div container for image -->
             <div class="imageContainer">
+                <!-- image created by Vijay Verma artist - icons8.com -->
                 <img class="gameboyImg" src="./assets/arcadeGameboyGummyByVijayVerma.svg" alt="Yellow GameBoy">
             </div>
             <!-- div will populate listed items with JS -->
@@ -41,10 +48,13 @@
             </div>
         </section>
     </main>
+    <!-- footer starts here -->
     <footer>
         <p>&copy; Made by Brandon &amp; Reza - <a href="https://www.junocollege.com/">Juno College</a></p>
     </footer>
+    <!-- JQuery script -->
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <!-- JavaScript script -->
     <script src="script.js"></script>
 </body>
 </html>
