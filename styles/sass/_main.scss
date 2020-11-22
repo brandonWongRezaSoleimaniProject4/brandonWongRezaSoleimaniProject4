@@ -1,12 +1,12 @@
 main {
-    height: 100vh;
+    height: 85vh;
     background-color: $primary;
 }
 
 form {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    padding: 30px 0;
     position: relative;
 }
 
@@ -14,10 +14,25 @@ input[type="search"] {
     padding: 15px;
     width: 100%;
     font-size: 24px;
+    border: $primary 5px solid;
 }
 
 button {
     padding: 15px 30px;
+    border: $primary 5px solid;
+    cursor: pointer;
+}
+
+input[type="search"]:hover,
+input[type="search"]:focus,
+button:hover, 
+button:focus {
+    border: $quaternary 5px solid;
+}
+
+button:active {
+    color: $quinary;
+    border: $quinary 5px solid;
 }
 
 .gameCardContainer {
@@ -27,8 +42,8 @@ button {
 }
 
 ul {
-    width: calc(100% / 3);
-    padding: 6px 20px;
+    width: 32%;
+    padding: 5px 20px;
 }
 
 li {
@@ -49,11 +64,17 @@ img {
 i.fa-search {
     color: $primary;
     position: absolute;
-    right: 16px;
-    top: 63px;
+    right: 17px;
+    top: 46px;
     font-size: 35px;
 }
 
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .gameboyImg {
-    height: 800px;
+    height: 600px;
+    margin-top: 55px;
 }
