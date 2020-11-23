@@ -415,7 +415,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 5vh;
+  height: 6vh;
   background-color: #04132A;
   font-family: 'Press Start 2P', cursive;
 }
